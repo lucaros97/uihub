@@ -44,6 +44,81 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     errors: Object
@@ -59,14 +134,14 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    document.title = 'Login | Inertia Hub';
+    document.title = 'Sign In | UI Hub';
   },
   methods: {
     submit: function submit() {
       var _this = this;
 
       this.sending = true;
-      this.$inertia.post(this.route('login.attempt'), {
+      this.$inertia.post(route('login.attempt'), {
         email: this.form.email,
         password: this.form.password,
         remember: this.form.remember
@@ -96,90 +171,150 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    {
-      staticClass:
-        "p-6 bg-indigo-darker min-h-screen flex justify-center items-center"
-    },
+    { staticClass: "relative min-h-screen overflow-hidden bg-gray-800" },
     [
+      _c("div", {
+        staticClass: "hidden lg:block absolute scroll-bg",
+        staticStyle: {
+          height: "400%",
+          width: "400%",
+          top: "-25%",
+          left: "-100%",
+          "background-size": "800px auto",
+          "background-image":
+            "url(https://www.tailwindui.com/components.4b326ba8.png)"
+        }
+      }),
+      _vm._v(" "),
       _c(
-        "form",
+        "div",
         {
-          staticClass: "w-full max-w-sm",
-          on: {
-            submit: function($event) {
-              $event.preventDefault()
-              return _vm.submit($event)
-            }
+          staticClass:
+            "relative min-h-screen lg:min-w-3xl xl:min-w-4xl lg:flex lg:items-center lg:justify-center lg:w-3/5 lg:py-20 lg:pl-8 lg:pr-8 bg-no-repeat bg-white",
+          staticStyle: {
+            "background-size": "100% auto",
+            "background-position": "-5px -5px"
           }
         },
         [
-          _c("div", { staticClass: "md:flex md:items-center mb-6" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("div", { staticClass: "md:w-2/3" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.form.email,
-                    expression: "form.email"
-                  }
-                ],
+          _c("div", { staticClass: "lg:pb-16" }, [
+            _c(
+              "div",
+              {
                 staticClass:
-                  "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500",
-                attrs: {
-                  id: "inline-full-name",
-                  type: "text",
-                  placeholder: "Email"
-                },
-                domProps: { value: _vm.form.email },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.form, "email", $event.target.value)
+                  "px-6 pt-16 pb-12 md:max-w-3xl md:mx-auto lg:max-w-full lg:pt-0"
+              },
+              [
+                _c("img", {
+                  staticClass: "h-10 lg:h-12",
+                  attrs: {
+                    src: __webpack_require__(/*! @/../assets/logo.svg */ "./resources/assets/logo.svg"),
+                    alt: "Tailwind UI"
                   }
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "md:flex md:items-center mb-6" }, [
-            _vm._m(1),
+                }),
+                _vm._v(" "),
+                _vm._m(0),
+                _vm._v(" "),
+                _c("div", { staticClass: "mt-10" }, [
+                  _c(
+                    "form",
+                    {
+                      staticClass: "w-full max-w-sm",
+                      on: {
+                        submit: function($event) {
+                          $event.preventDefault()
+                          return _vm.submit($event)
+                        }
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "md:flex md:items-center mb-6" },
+                        [
+                          _c("div", { staticClass: "w-full" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.email,
+                                  expression: "form.email"
+                                }
+                              ],
+                              staticClass:
+                                "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-500",
+                              attrs: {
+                                id: "inline-full-name",
+                                type: "text",
+                                placeholder: "Email"
+                              },
+                              domProps: { value: _vm.form.email },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "email",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "md:flex md:items-center mb-6" },
+                        [
+                          _c("div", { staticClass: "w-full" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.password,
+                                  expression: "form.password"
+                                }
+                              ],
+                              staticClass:
+                                "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-500",
+                              attrs: {
+                                id: "inline-username",
+                                type: "password",
+                                placeholder: "******************"
+                              },
+                              domProps: { value: _vm.form.password },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "password",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm._m(1)
+                    ]
+                  )
+                ])
+              ]
+            ),
             _vm._v(" "),
-            _c("div", { staticClass: "md:w-2/3" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.form.password,
-                    expression: "form.password"
-                  }
-                ],
-                staticClass:
-                  "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500",
-                attrs: {
-                  id: "inline-username",
-                  type: "password",
-                  placeholder: "******************"
-                },
-                domProps: { value: _vm.form.password },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.form, "password", $event.target.value)
-                  }
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _vm._m(2)
+            _vm._m(2)
+          ])
         ]
       )
     ]
@@ -190,15 +325,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "md:w-1/3" }, [
+    return _c("div", { staticClass: "mt-8 lg:mt-16" }, [
       _c(
-        "label",
+        "h1",
         {
           staticClass:
-            "block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4",
-          attrs: { for: "inline-full-name" }
+            "mt-2 text-4xl leading-tight xl:text-4xl font-bold font-display text-gray-800"
         },
-        [_vm._v("\n          Email\n        ")]
+        [_vm._v("Sign in for inspiration.")]
       )
     ])
   },
@@ -206,37 +340,42 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "md:w-1/3" }, [
-      _c(
-        "label",
-        {
-          staticClass:
-            "block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4",
-          attrs: { for: "inline-username" }
-        },
-        [_vm._v("\n          Password\n        ")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "md:flex md:items-center" }, [
-      _c("div", { staticClass: "md:w-1/3" }),
-      _vm._v(" "),
-      _c("div", { staticClass: "md:w-2/3" }, [
+    return _c("div", { staticClass: "md:flex md:items-end" }, [
+      _c("div", { staticClass: "w-full" }, [
         _c(
           "button",
           {
             staticClass:
-              "shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded",
+              "shadow bg-yellow-500 hover:bg-yellow-400 focus:shadow-outline focus:outline-none font-bold py-2 px-10 rounded",
             attrs: { type: "submit" }
           },
-          [_vm._v("\n          Sign Up\n        ")]
+          [_vm._v("\n            Sign in\n          ")]
         )
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "relative h-64 overflow-hidden lg:hidden" },
+      [
+        _c("div", {
+          staticClass: "absolute scroll-bg",
+          staticStyle: {
+            height: "400%",
+            width: "400%",
+            top: "-100%",
+            left: "-100%",
+            "background-size": "400px auto",
+            "background-image":
+              "url(https://www.tailwindui.com/components.4b326ba8.png)"
+          }
+        })
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -349,6 +488,17 @@ function normalizeComponent (
   }
 }
 
+
+/***/ }),
+
+/***/ "./resources/assets/logo.svg":
+/*!***********************************!*\
+  !*** ./resources/assets/logo.svg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/logo.svg?126b14fdc578574d55e586ebddea7101";
 
 /***/ }),
 

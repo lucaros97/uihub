@@ -3,8 +3,8 @@ import Vue from 'vue'
 
 Vue.use(InertiaApp)
 
-const app = document.getElementById('app');
-Vue.prototype.$route = (...args) => route(...args).url();
+Vue.prototype.$route = (...args) => route(...args).url()
+const app = document.getElementById('app')
 
 new Vue({
   render: h => h(InertiaApp, {

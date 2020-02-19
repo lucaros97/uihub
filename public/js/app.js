@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"6caef5676998623bec9a","1":"399ab33ff4035db93296","2":"e706fd38599e36f2cb3a"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"622853a1104f8a6c0e66","1":"399ab33ff4035db93296","2":"858c0c7fc2960c1b4a93"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -11548,12 +11548,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].use(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_0__["InertiaApp"]);
-var app = document.getElementById('app');
 
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].prototype.$route = function () {
   return route.apply(void 0, arguments).url();
 };
 
+var app = document.getElementById('app');
 new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
   render: function render(h) {
     return h(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_0__["InertiaApp"], {
