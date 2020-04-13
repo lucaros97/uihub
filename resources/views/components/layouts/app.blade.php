@@ -23,6 +23,7 @@
     <div id="app">
         <!-- Navbar -->
         <x-navbar></x-navbar>
+        <x-filters></x-filters>
         <!-- Contents -->
         <main class="p-4">
             {{ $slot }}

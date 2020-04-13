@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Sessions
 Auth::routes();
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/feed', 'HomeController@index')->name('feed');
