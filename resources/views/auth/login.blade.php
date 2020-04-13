@@ -1,6 +1,4 @@
-@extends('layouts.base')
-
-@section('content')
+<x-layouts.base>
   <div class="relative min-h-screen overflow-hidden bg-gray-800"> 
     <div class="hidden lg:block absolute scroll-bg" style="height:400%;width:400%;top:-25%;left:-100%;background-size:800px auto;background-image:url(https://www.tailwindui.com/components.4b326ba8.png);"></div> 
       <div class="relative min-h-screen lg:min-w-3xl xl:min-w-4xl lg:flex lg:items-center lg:justify-center lg:w-3/5 lg:py-20 lg:pl-8 lg:pr-8 bg-no-repeat bg-white" style="background-size:100% auto;background-position:-5px -5px;"> 
@@ -60,4 +58,4 @@
       </div>
     </div>
 </div>
-@endsection
+</x-layouts.base>

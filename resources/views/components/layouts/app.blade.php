@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -20,8 +21,11 @@
 </head>
 <body>
     <div id="app">
-        <main>
-            @yield('content')
+        <!-- Navbar -->
+        <x-navbar></x-navbar>
+        <!-- Contents -->
+        <main class="p-4">
+            {{ $slot }}
         </main>
     </div>
 </body>
