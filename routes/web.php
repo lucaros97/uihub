@@ -22,4 +22,4 @@ Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 
-Route::get('/feed', 'HomeController@index')->name('feed');
+Route::get('/feed', 'FeedController@index')->name('feed');

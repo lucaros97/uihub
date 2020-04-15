@@ -1,6 +1,6 @@
-<div class="container mx-auto my-10">  
-    <div class="grid grid-cols-8">
-        <div class="col-span-1">
+<div class="max-w-6xl xl:mx-auto my-10 mx-4">  
+    <div class="grid grid-cols-2 lg:grid-cols-8">
+        <div class="col-span-1 row-start-2 lg:row-start-auto">
             <div x-data="{ open: false }" @keydown.escape="open = false" @click.away="open = false" class="relative inline-block text-left">
             <div>
                 <span class="rounded-md shadow-sm">
@@ -29,7 +29,7 @@
             </div>
             </div>
         </div>
-        <div class="col-span-6">
+        <div class="col-span-2 lg:col-span-6 row-start-1 lg:row-start-auto">
             <div class="flex items-center justify-center">
                 @foreach($frameworks as $key => $framework)
                     <a class="inline-block mx-2">
@@ -40,7 +40,7 @@
                 @endforeach
             </div>
         </div>
-        <div class="col-span-1">
+        <div class="col-span-1 row-start-2 lg:row-start-auto text-right">
             <button class="inline-flex justify-center items-center rounded-md border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4 mr-1"><path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path></svg>
                 Filters
