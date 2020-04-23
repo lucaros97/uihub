@@ -1,3 +1,24 @@
+@section('styles')
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+    <style>
+        .filepond--panel-root {
+            background: #fff;
+            border: 2px solid #e2e8f0;
+        }
+    </style>
+@endsection()
+@section('scripts')
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>s
+    <script>
+    // Register the plugin
+    FilePond.registerPlugin(FilePondPluginImagePreview);
+    const inputElement = document.querySelector('input[type="file"]');
+    const pond = FilePond.create( inputElement );
+    </script>
+@endsection()
+
 <x-layouts.app>
     <div class="max-w-6xl mx-auto flex items-center my-16">
         <div class="grid grid-cols-1 w-full">
@@ -27,7 +48,7 @@
                         <div class="flex flex-wrap w-full mt-16">
                             <div class="w-full md:mb-0">
                                 <label for="work-name" class="block capitalize tracking-wide text-gray-800 text-sm font-medium mb-2">Image</label>
-                                <input required="required" id="work-name" name="name" type="text" placeholder="" class="appearance-none block w-full text-gray-700 border-2 border-gray-300 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                <input type="file">
                             </div>
                         </div>
                     </div>

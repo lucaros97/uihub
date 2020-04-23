@@ -22,6 +22,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "filepond": "^4.13.4",
         "postcss-import": "^12.0.1",
         "tailwindcss": "^1.2.0"
     }
