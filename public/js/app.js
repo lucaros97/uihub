@@ -117,8 +117,8 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\code\uihub\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\code\uihub\resources\sass\app.css */"./resources/sass/app.css");
+__webpack_require__(/*! /Users/lucarossi/code/uihub/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/lucarossi/code/uihub/resources/sass/app.css */"./resources/sass/app.css");
 
 
 /***/ })

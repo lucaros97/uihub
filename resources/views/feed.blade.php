@@ -1,4 +1,5 @@
 <x-layouts.app>
+    <x-filters></x-filters>
     <div class="max-w-6xl mx-auto">
         @foreach($shots as $key => $shot)
             <div class="grid grid-cols-1 lg:grid-cols-6 row-span-4 col-gap-8 row-gap-4 mb-10 lg:mb-24">

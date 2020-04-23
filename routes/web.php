@@ -23,3 +23,6 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 
 Route::get('/feed', 'FeedController@index')->name('feed');
+
+// Shots
+Route::get('shots/upload', 'ShotController@upload')->name('shots.upload');
