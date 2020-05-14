@@ -1,11 +1,26 @@
 <x-layouts.app>
     <x-filters></x-filters>
     <div class="max-w-6xl mx-auto">
+        @if(Session::has('success'))
+            <div class="z-20 absolute inset-y-0 right-0">
+                <div class="max-w-lg rounded-lg px-5 shadow-md border border-gray-300 z-10 bg-white mt-24 mr-10 text-center py-4 flex items-center">
+                    <div class="mx-auto flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-green-200 mr-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 13L9 17L19 7" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="text-md font-semibold">Your shot has been uploaded!</span>
+                    <button class="text">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-4 h-4 text-gray-600 ml-4"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+            </div>
+        @endif
         @foreach($shots as $key => $shot)
             <div class="grid grid-cols-1 lg:grid-cols-6 row-span-4 col-gap-8 row-gap-4 mb-10 lg:mb-24">
                 <div class="col-span-1 lg:col-span-4 row-start-2 lg:row-start-auto">
                     <div class="w-full h-full flex">
-                        <img src="{{ $shot->image[0]->url }}" class="w-full h-full rounded-lg" />
+                        <img src="{{ Storage::url($shot->image[0]->url) }}" class="w-full h-full rounded-lg" />
                     </div>
                 </div>
                 <div class="col-span-1 lg:col-span-2 row-start-1 lg:row-start-auto">
@@ -30,7 +45,7 @@
                             <span class="font-medium text-xs lg:text-sm text-gray-700">
                                 Made with
                             </span>
-                            <img src="{{ $shot->framework->logo }}" class="h-4 lg:h-8">
+                            <img src="{{ $shot->framework->logo }}" class="h-4 lg:h-6">
                         </div>
                     </div>
                 </div>

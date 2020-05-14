@@ -17,6 +17,7 @@ class CreateFrameworksTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
+            $table->string('logo');
             $table->string('website');
             $table->timestamps();
         });

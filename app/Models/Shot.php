@@ -10,6 +10,7 @@ class Shot extends Model
 {
     protected $guarded = [''];
     protected $with = ['image', 'user', 'framework'];
+    public $timestamps = true;
 
     public function image()
     {

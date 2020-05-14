@@ -9,6 +9,8 @@ class FeedController extends Controller
 {
     public function index()
     {
+
+        // dd(Shot::all());
         return view('feed')->with([
             'shots' => Shot::all()
         ]);

@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
- * FilePond 4.13.4
+ * FilePond 4.13.6
  * Licensed under MIT, https://opensource.org/licenses/MIT/
  * Please visit https://pqina.nl/filepond/ for details.
  */
@@ -7551,6 +7551,18 @@
             }
           );
         } else {
+          // if is limbo item, need to call revert handler (not calling request_ because that would also trigger beforeRemoveHook)
+          if (item.origin !== FileOrigin.LOCAL && item.serverId !== null) {
+            item.revert(
+              createRevertFunction(
+                state.options.server.url,
+                state.options.server.revert
+              ),
+              query('GET_FORCE_REVERT')
+            );
+          }
+
+          // can now safely remove from view
           removeFromView();
         }
       }),

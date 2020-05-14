@@ -26,3 +26,5 @@ Route::get('/feed', 'FeedController@index')->name('feed');
 
 // Shots
 Route::get('shots/upload', 'ShotController@upload')->name('shots.upload');
+Route::post('shots/upload', 'ShotController@store')->name('shots.store');
+Route::post('shots/uploadimage', 'ShotController@storeImage')->name('shots.storeimage');
